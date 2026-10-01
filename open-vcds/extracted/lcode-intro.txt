@@ -1,0 +1,70 @@
+Short intro:
+
+VCDS use:
+When LCode is started within VCDS, the Long Coding is automatically inserted from VCDS.
+The right information text is also loaded from a LBL or XPL file.
+Use [Arrow Down/Up] to search for the item(s) you want to change or check.
+Add or remove a marker with left mouse to change the current Coding.
+After the first change is made, there is a menu [Back to standard] available,
+If you want to go back to original Coding.
+After there is made a change in Coding, the current Coding is in Windows buffer.
+So when you close LCode, the new Coding is copied in the second line of VCDS.
+
+Press [ESC] to close the program.
+
+----------------------------------------------------------------------------------
+
+LCode standalone use:
+Paste Long Coding from VCDS into 1) from the ECU's available [01] [09] [19] [46]
+[Arrow Down] to 2) and load the right XPL or LBL file.
+[Arrow Down] to 3) to search for the item(s) you want to change.
+Make or remove a marker with left mouse to change the Coding.
+After there is made a change in the Coding, the current Coding is in Windows Buffer.
+So when you close LCode, the new Coding is available to Paste.
+
+Press [ESC] to close the program.
+
+----------------------------------------------------------------------------------
+
+Short Coding use:
+For use of Short Coding insert the complete Short Coding, including all preceding zeros,
+E.g. 0131313 taken from an Audi A6 (4F) Module [46].
+See text explanation in "Balloon help" under VCDS Coding,
+Or choose the car you have at Openobd.org, E.g. Audi A6 (4F) Module [46] go to:
+http://wiki.ross-tech.com/wiki/index.php/Audi_A6_%284F%29_Comfort_System
+
+http://de.openobd.org/audi/a6_4f.htm#46
+
+Press [ESC] to close the program.
+
+----------------------------------------------------------------------------------
+Some tips:
+If Multibyte Pull-down is pressed just to observe the possible options,
+choose the active option again, then the focus is back on the actual byte.
+
+If you don't want to count what number you want to activate,
+of the actual byte in menu 3),
+use mouse "hoover", the Byte number is shown in the Statusbar.
+
+The length of Coding is shown at the right buttom.
+
+If you enter a "Short Code" manual (less that 5 byte)
+you can press [Copy] and the actual definitions of Short Coding is in Windows Clipboard.
+
+You can force "Short Code" by adding a "+" at the start or end, e.g.: +3993 or 0393969+
+You can change a decimal number to hex by addaing a "h" at the end, e.g.: 00065493h
+You can change a hex number to decimal by addaing a "d" at the end, e.g.: 0000FFD5d
+Then press key "Arrow down" on the keyboard.
+
+Press "Insert" to copy binary data from current long coding to windows buffer.
+
+----------------------------------------------------------------------------------
+In exchange for this freeware program, please send your 00 Auto-Scan values to me:
+Fill in form at:
+http://www.netech.dk/index.php/send-ecu-data
+----------------------------------------------------------------------------------
+
+Please send corrections and new long coding explanations to:
+nez@netech.dk or sebastian@ross-tech.com
+
+18 Apr. 2011
