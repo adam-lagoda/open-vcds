@@ -1,0 +1,54 @@
+;INF file to disable enhanced power management for the HEXNET under Win8.1
+
+[Version]
+Signature   ="$WINDOWS NT$"
+Class       =HIDClass
+ClassGuid   ={745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Provider    =%VendorName%
+DriverVer   =01/05/2014,6.3.0.3
+CatalogFile =HEXNET.cat
+
+; ================= Class section =====================
+[ControlFlags]
+ExcludeFromSelect=*
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%VendorName% = RTHEXNET,NTx86,NTamd64
+
+[RTHEXNET.NTx86]
+%VendorXYZ.DeviceDesc% = RTHEXNET_Install, USB\VID_0483&PID_A00F
+%VendorXYZ.DeviceDescV2% = RTHEXNET_Install, USB\VID_0483&PID_A0CB
+
+[RTHEXNET.NTamd64]
+%VendorXYZ.DeviceDesc% = RTHEXNET_Install, USB\VID_0483&PID_A00F
+%VendorXYZ.DeviceDescV2% = RTHEXNET_Install, USB\VID_0483&PID_A0CB
+
+
+
+
+[RTHEXNET_Install.NT] 
+include     = input.inf 
+needs       = HID_Inst.NT
+
+[RTHEXNET_Install.NT.HW]
+AddReg      = RTHEXNET_AddReg
+
+[RTHEXNET_AddReg] 
+HKR,,"EnhancedPowerManagementEnabled",0x00010001,0
+
+[RTHEXNET_Install.NT.Services]
+include     = input.inf 
+needs       = HID_Inst.NT.Services 
+
+[Strings]
+VendorName = "Ross-Tech"
+DiskName   = "Ross-Tech Installation Files"
+VendorXYZ.DeviceDesc = "Ross-Tech HEX-NET Interface"
+VendorXYZ.DeviceDescV2 = "Ross-Tech HEX-V2 Interface"
